@@ -12,7 +12,6 @@ const WEBSITE_ROOT = "/website";
 // GET files or directories
 methods.GET = async function (request) {
   if (request.url === "/") {
-    console.log("index");
     return {
       body: createReadStream(process.cwd() + WEBSITE_ROOT + "/index.html"),
       type: "text/html",
